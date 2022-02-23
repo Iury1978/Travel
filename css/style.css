@@ -1,11 +1,20 @@
+:root {
+  --light-text-color: white;
+  --light-dark-text-color: #102746;
+  --dark-text-color: #000000;
+
+}
+
 /* lato-regular - latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/lato-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/lato-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/lato-v22-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v22-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* lato-700 - latin */
@@ -14,8 +23,10 @@
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/lato-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/lato-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/lato-v22-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v22-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* lato-900 - latin */
@@ -24,13 +35,59 @@
   font-style: normal;
   font-weight: 900;
   src: local(''),
-       url('../fonts/lato-v22-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/lato-v22-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/lato-v22-latin-900.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/lato-v22-latin-900.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 html {
   box-sizing: border-box;
 }
+
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato';
+  font-style: normal;
+  font-style: 16px;
+  line-height: 1.2;
+  color: var(--light-dark-text-color);
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: rgb(155, 155, 155);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 82px;
+}
+.header__link {
+  font-size: 18px;
+line-height: 24px;
+color: var(--light-text-color);
+text-decoration: none;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active {
+  opacity: .80;
 }
