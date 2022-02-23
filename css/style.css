@@ -63,12 +63,12 @@ body {
 }
 
 .header {
-  background-color: rgb(155, 155, 155);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
+
 .header__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -76,18 +76,90 @@ body {
   justify-content: space-between;
   padding-top: 56px;
 }
+
 .header__list {
   display: flex;
   flex-wrap: wrap;
   gap: 82px;
 }
+
 .header__link {
   font-size: 18px;
-line-height: 24px;
-color: var(--light-text-color);
-text-decoration: none;
+  line-height: 24px;
+  color: var(--light-text-color);
+  text-decoration: none;
 }
 
 .header__link:hover, .header__link:focus, .header__link:active {
   opacity: .80;
+}
+
+/* Intro styles */
+/* height: 100vh; всю высоту экрана 100% *
+сейчас он занимает даже область хэлдера, потому что он фиксед, 
+поэтому картинка будет занимать весь экран*/
+.intro {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%), url(../img/image-bg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 263px;
+}
+
+.intro__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: var(--light-text-color);
+  max-width: 619px;
+  margin-bottom: 22px;
+}
+
+.intro_subtitle {
+  color: var(--light-text-color);
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 546px;
+  margin-bottom: 59px;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.search-form__field {
+  width: 297px;
+  background-color: transparent;
+  background: url(../img/svg/circle_icon.svg) no-repeat left 6px;
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #BFC0C5;
+  padding-left: 43px;
+  padding-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--light-text-color);
+}
+
+.search-form__field::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--light-text-color);
+}
+
+.search-form__submit {
+  padding: 15px 39px;
+  text-transform: uppercase;
+  background-color: #1B7DFF;
+  border: 0;
+  color: var(--light-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
+  background-color: #095dca;
 }
