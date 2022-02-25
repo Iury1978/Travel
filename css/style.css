@@ -71,6 +71,32 @@ body {
   margin: 0 auto;
 }
 
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: var(--light-dark-text-color);
+  position: relative;
+  /* этот паддинг для псевдоэлемента */
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 253px;
+  height: 3px;
+  background-color: var(--blue-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -112,6 +138,10 @@ body {
   background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%), url(../img/image-bg.jpg) no-repeat center;
   background-size: cover;
   padding-top: 263px;
+  /* что бы при пополнении контента в блоке интро он не наезжал на следующи йдлок
+  мы рассчитаем его высоту из данных инспектра 
+  (блока Benefits Odigo) */
+  padding-bottom: 223px;
 }
 
 .intro__title {
@@ -203,9 +233,12 @@ body {
   padding: 93px 100px 88px 100px;
 
 }
+
 .benefits {
-  margin-bottom: 131px;: ;
+  margin-bottom: 131px;
+  : ;
 }
+
 .benefits__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -250,13 +283,116 @@ body {
   display: inline-block;
   padding-right: 59px;
   font-size: 16px;
-line-height: 24px;
-color: var(--blue-color);
-text-decoration: none;
-background: url(../img/svg/arrow_right_icon.svg) no-repeat 95% center;
-transition: 0.2s all;
+  line-height: 24px;
+  color: var(--blue-color);
+  text-decoration: none;
+  background: url(../img/svg/arrow_right_icon.svg) no-repeat 95% center;
+  transition: 0.2s all;
 }
 
 .benefits__card-more:hover, .benefits__card-more:focus {
   background: url(../img/svg/arrow_right_icon.svg) no-repeat right center;
+}
+
+/* places styles */
+.places {
+  margin-bottom: 131px;
+}
+
+.places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+/* что бы при уденьшении экрана этот титр
+не налезал на элемент (Get inspired for your next trip*/
+.places__title {
+  margin-right: 15px;
+}
+
+.places__view-all {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--blue-color);
+  text-decoration: none;
+  background: url(../img/svg/arrow_right_icon.svg) no-repeat right center;
+  padding-right: 59px;
+
+}
+
+.places__view-all:hover, .places__view-all:focus {
+  opacity: 0.65;
+}
+
+.places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.places__card_size_large {
+  grid-column: span 3;
+}
+
+.places__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.places__card::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.places__card:hover .places__card-pic {
+  transform: scale(1.05);
+}
+
+.places__card-title {
+  font-size: 50px;
+  line-height: 60px;
+  color: var(--light-text-color);
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+}
+
+.places__card-pic {
+  width: 100%;  
+  transition: 0.3s all;
+}
+
+.places__card-pic_size_large {
+  height: 354px;
+  object-fit: cover;
+}
+
+/* растягиваем на весь контейнер из верхнего левого угла
+на 100% в высоту и в ширину и зиндексом закидываем поверх всего */
+.places__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.places__card_size_small {
+  grid-column: span 2;
+}
+
+.places__card-pic_size_small {
+  height: 283px;
+  object-fit: cover;
 }
