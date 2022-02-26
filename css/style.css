@@ -430,6 +430,7 @@ body {
   color: var(--light-dark-text-color);
   margin-bottom: 58px;
 }
+
 .tour__more {
   font-size: 16px;
   line-height: 24px;
@@ -442,4 +443,105 @@ body {
 
 .tour__more:hover, .tour__more:focus {
   background: url(../img/svg/arrow_right_icon.svg) no-repeat 100% center;
+}
+
+/* top places styles */
+.top {
+  margin-bottom: 86px;
+}
+
+.top__title {
+  margin-bottom: 54px;
+}
+
+.top__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 57px;
+}
+
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+/* это сделано для того, если описание карточки рахной длны
+что бы кнопка си мо была всегда на одном уровне.
+Так как гриды все растягиваются до максимального, 
+то можем во флексе прибить кнопку к низу флекс контейнера, 
+как мы \то слелали в top__card-title*/
+.top__card {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.top__card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.6);
+  padding: 16px 25px;
+}
+
+.top__card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--light-text-color);
+  /* țnj хорошая особнность флэкксов. справа авто тступ
+  и прижимаем в левому краю контейнера получается */
+  margin: 0 auto 0 0;
+}
+
+.top__card-likes {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--light-text-color);
+  margin-right: 14px;
+  /* размер элеменета лайкс(сердечко 16 и 4 пикселя между ними отступ, 
+поэтому задаем паддинг на 20 пикселей */
+  padding-right: 20px;
+  background: url(../img/svg/heart_icon.svg) no-repeat right;
+}
+
+.top__card-comments {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--light-text-color);
+  padding-right: 23px;
+  background: url(../img/svg/comment_icon.svg) no-repeat right;
+}
+
+.tip__card-description {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--light-dark-text-color);
+  margin-bottom: 31px;
+}
+
+.top__card-more {
+  padding: 12px 19px;
+  text-decoration: none;
+  background-color: #1B7DFF;
+  border: 0;
+  color: var(--light-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  width: 118px;
+  /* выравниваем по нижней части карточки */
+  margin: auto 0 0 0;
+
+}
+
+.top__card-more:hover, .top__card-more:focus, .top__card-more:active {
+  background-color: #095dca;
 }
