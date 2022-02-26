@@ -102,6 +102,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  transition: 0.3s linear;
+}
+.header_active {
+  background: var(--light-dark-text-color);
+  padding-bottom: 30px;
+  z-index: 5;
 }
 
 .header__wrapper {
@@ -495,7 +501,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: var(--light-text-color);
-  /* țnj хорошая особнность флэкксов. справа авто тступ
+  /* это' хорошая особнность флэкксов. справа авто тступ
   и прижимаем в левому краю контейнера получается */
   margin: 0 auto 0 0;
 }
