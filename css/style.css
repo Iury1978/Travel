@@ -104,6 +104,7 @@ body {
   width: 100%;
   transition: 0.3s linear;
 }
+
 .header_active {
   background: var(--light-dark-text-color);
   padding-bottom: 30px;
@@ -550,4 +551,71 @@ body {
 
 .top__card-more:hover, .top__card-more:focus, .top__card-more:active {
   background-color: #095dca;
+}
+
+/* video block */
+
+.videos {
+  width: 100%;
+}
+
+.videos__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* процент вычисляем 9:16 * 100. что бы соответствовал всегда пропорциям видео */
+.video__item {
+  padding-top: 56.25%;
+}
+
+.video__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer {
+  background-color: #0E1D28;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+.footer__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  /* flex-basis: 50%; */
+  width: 50%;
+}
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: space-between;
+  
+}
+
+.footer__menu-title {
+  font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+color: var(--light-text-color);
+text-decoration: none;
+}
+
+.footer__menu-link {
+  font-size: 16px;
+line-height: 24px;
+color: var(--light-text-color);
+text-decoration: none;
+}
+.footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active {
+  opacity: 0.75;
 }
