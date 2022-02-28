@@ -69,11 +69,13 @@ body {
 .wrapper {
   max-width: 1060px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .wrapper-full {
   max-width: 1262px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .section-title {
@@ -619,3 +621,5 @@ text-decoration: none;
 .footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active {
   opacity: 0.75;
 }
+
+/*  */
